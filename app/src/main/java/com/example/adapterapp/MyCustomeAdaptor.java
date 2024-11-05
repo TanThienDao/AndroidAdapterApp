@@ -42,11 +42,18 @@ public class MyCustomeAdaptor extends BaseAdapter {
             //              improve the performance of your list
             convertView = LayoutInflater.from(context).
                     inflate(R.layout.my_list_item,parent,false);
+            holder = new ViewHolder();
+            holder.textView = convertView.findViewById(R.id.text1);
+            convertView.setTag(holder);
         }else {
             // Reusing the View (that's recycled)
             holder = (ViewHolder) convertView.getTag();
         }
-        return null;
+        //set the data to the view
+        holder.textView.setText(items[position]);
+
+        //binding data to views within the convertView
+        return convertView;
     }
     static class ViewHolder{
         // Holds references to the views within an item layout

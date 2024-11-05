@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         // 3 - Adapter: acts as a bridge between the
         //              'date source' and the 'AdapterView'
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+       /* ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 countries
-        );
+        );*/
+
+        MyCustomeAdaptor adapter = new MyCustomeAdaptor(this ,countries);
 
         // Link ListView with the Adapter
         listView.setAdapter(adapter);
