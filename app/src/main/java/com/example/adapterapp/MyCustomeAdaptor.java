@@ -40,6 +40,7 @@ public class MyCustomeAdaptor extends BaseAdapter {
         if(convertView == null){
             // convertView: is a recycled View that you can reuse to
             //              improve the performance of your list
+            //test
             convertView = LayoutInflater.from(context).
                     inflate(R.layout.my_list_item,parent,false);
             holder = new ViewHolder();
